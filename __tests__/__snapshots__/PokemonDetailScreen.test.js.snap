@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetailScreen renders PokemonDetailScreen correctly 1`] = `
+<RCTSafeAreaView>
+  <PokemonDetail
+    route={
+      {
+        "params": {
+          "name": "pikachu",
+        },
+      }
+    }
+    testID="PokemonDetail"
+  />
+</RCTSafeAreaView>
+`;
