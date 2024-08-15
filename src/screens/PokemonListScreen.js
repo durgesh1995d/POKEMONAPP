@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, Dimensions, SafeAreaView, View } from 'react-native';
+import { Alert, Button, Dimensions, SafeAreaView, View } from 'react-native';
 import PokemonList from '../component/PokemonList';
 import * as Notifications from 'expo-notifications';
 
@@ -29,7 +29,7 @@ const PokemonListScreen = ({ navigation }) => {
       },
       trigger,
     });
-
+    Alert.alert(`Notification scheduled for ${minutes} minutes from now.`);
     console.log(`Notification scheduled for ${minutes} minutes from now.`);
   };
   Notifications.setNotificationHandler({
@@ -55,7 +55,7 @@ const PokemonListScreen = ({ navigation }) => {
         <View style={{ paddingBottom: 10 }}>
           <Button
             title='Schedule 2 Min Notification'
-            onPress={() => scheduleNotification(1)}
+            onPress={() => scheduleNotification(2)}
           />
         </View>
         <Button
